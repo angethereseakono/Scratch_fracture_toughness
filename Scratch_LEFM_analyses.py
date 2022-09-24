@@ -88,31 +88,30 @@ for when in When:
                 aux=(gr1/f1)**0.5
                 Ks=numpy.mean(aux[Pd>max(Pd)*0.5])
                 dKs=numpy.std(aux[Pd>max(Pd)*0.5])
-##                file1.write(when+'\t'+material+'\t'+direction+'\t'+"%10.2f" % (Ks)+'\t'+"%10.2f" % (dKs)+'\n')
+                file1.write(when+'\t'+material+'\t'+direction+'\t'+"%10.2f" % (Ks)+'\t'+"%10.2f" % (dKs)+'\n')
                 print(Ks,dKs)
-##
-                ##
-##                fig=plt.figure(n)
-##                ax = plt.subplot()
-##                axis_font = {'fontname':'Arial', 'size':'24'}
-##                for label in (ax.get_xticklabels() + ax.get_yticklabels()):
-##                    label.set_fontname('Arial')
-##                    label.set_fontsize(24)
-##                ax.set_position([0.15,0.15,0.7,0.8])
-##                ax.set_axisbelow(True)
-##
-##                plt.plot(Pd/R, (gr1/f1)**0.5, linestyle='--', marker='o', color='b')
-##                plt.axhline(y = Ks, color = 'k', linestyle = '-')
-##                plt.axhline(y = Ks+dKs, color = 'k', linestyle = '--')
-##                plt.axhline(y = Ks-dKs, color = 'k', linestyle = '--') 
-##                ax.set_ylim(0,7)
-##                ax.set_xlim(0,max(Pd/R)*1.05)
-##                plt.xlabel("$d/R$", **axis_font)
-##                plt.ylabel("$F_T/\sqrt{2pA}$, $MPa\sqrt{m}$", **axis_font)
-##                plt.tight_layout()
-##                plt.savefig(when+'_'+material+'_'+direction+'_'+'%d' %(j+1) + '.tiff')
-##                plt.close()
-##                n=n+1
+
+                fig=plt.figure(n)
+                ax = plt.subplot()
+                axis_font = {'fontname':'Arial', 'size':'24'}
+                for label in (ax.get_xticklabels() + ax.get_yticklabels()):
+                    label.set_fontname('Arial')
+                    label.set_fontsize(24)
+                ax.set_position([0.15,0.15,0.7,0.8])
+                ax.set_axisbelow(True)
+
+                plt.plot(Pd/R, (gr1/f1)**0.5, linestyle='--', marker='o', color='b')
+                plt.axhline(y = Ks, color = 'k', linestyle = '-')
+                plt.axhline(y = Ks+dKs, color = 'k', linestyle = '--')
+                plt.axhline(y = Ks-dKs, color = 'k', linestyle = '--') 
+                ax.set_ylim(0,7)
+                ax.set_xlim(0,max(Pd/R)*1.05)
+                plt.xlabel("$d/R$", **axis_font)
+                plt.ylabel("$F_T/\sqrt{2pA}$, $MPa\sqrt{m}$", **axis_font)
+                plt.tight_layout()
+                plt.savefig(when+'_'+material+'_'+direction+'_'+'%d' %(j+1) + '.tiff')
+                plt.close()
+                n=n+1
                 
                 
                 
