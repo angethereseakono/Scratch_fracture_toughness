@@ -5,6 +5,17 @@ The method follows the theoretical model proposed in this paper: Akono, A.T., Ra
 # Installation
 Download this script in the same folder as the raw text-format scratch test data.
 # Citation
-This script can be cited as Akono, 2022.
+This script can be cited as:
+
+authors:
+- family-names: "Akono"
+  given-names: "Ange-Therese"
+  
+title: "Code for determining the fracture toughness using scratch tests"
+version: 1.0.0
+doi: 10.5281/zenodo.7109349
+date-released: 2022-09-21
+url: "https://github.com/angethereseakono/Scratch_fracture_toughness"
+
 # Contact
 For further questions, the author can be reached at ange-therese.akono@northwestern.edu
